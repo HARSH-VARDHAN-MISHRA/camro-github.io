@@ -3,37 +3,45 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import banner1 from '../header/banner/banner-1.jpg'
+import banner2 from '../header/banner/banner-2.jpg'
 
 import './styles.css';
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination ,Navigation } from 'swiper/modules';
 
 const Carasol = () => {
     const imgData = [
         {
             id: 1,
-            img: ""
+            img: banner1
+        },
+        {
+            id:2,
+            img: banner2
         }
     ]
   return (
     <>
         <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
             pagination={{
-            dynamicBullets: true,
+              clickable: true,
             }}
-            modules={[Pagination]}
+            navigation={true}
+            modules={[Pagination, Navigation]}
             className="mySwiper"
         >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+            {
+                imgData && imgData.map((item,index)=>(
+                    <SwiperSlide key={index}><img src={item.img} alt="" /></SwiperSlide>
+
+                ))
+            }
+            
         </Swiper>
     </>
   )
