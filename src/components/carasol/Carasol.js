@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import banner1 from '../header/banner/banner-1.jpg'
-import banner2 from '../header/banner/banner-2.jpg'
+import banner1 from './banner/banner-1.jpg'
+import banner2 from './banner/banner-2.jpg'
 
 import './styles.css';
 
