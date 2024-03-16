@@ -37,6 +37,10 @@
 .product-categories-page .grid-cate .single , 
 .product-categories-page .grid-cate .single img{
     border-radius: 5px;
+    transition: all 200ms ease-in;
+}
+.product-categories-page .grid-cate .single:hover{
+    filter: brightness(0.9);
 }
 
 .product-categories-page .grid-cate .single{
@@ -48,6 +52,12 @@
 .product-categories-page .grid-cate .single h4{
     font-size: 1.2rem;
     margin-top: 0.5rem;
+    padding-bottom: 0.2rem;
+}
+.product-categories-page .grid-cate .single span{
+    color: var(--color-red-1);
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
 

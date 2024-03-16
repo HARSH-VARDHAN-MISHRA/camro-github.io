@@ -8,8 +8,9 @@ const Category = () => {
     const handleCategories= async()=>{
         try {
 
-            const response = await axios.get("https://cooker.onrender.com/api/v1/all-product")
-            console.log(response.data.data);
+            const response = await axios.get("https://cooker.onrender.com/api/v1/getAllCategorey")
+            console.log(response.data);
+            setCateg(response.data)
         } catch (error) {
             console.log(error);
         }
@@ -38,11 +39,13 @@ const Category = () => {
             <div className="container">
                 <div className="row">
                     <div className="grid-cate">
-                        <Link to='' className="single">
-                            <img src="https://i.ibb.co/wsKJqW4/non-stick-aluminium.png" alt="non-stick-aluminium" />
-                            <h4>Pressure Cooker</h4>
-                            <span className='avail'>56 Items</span>
-                        </Link>
+                        {categ.map((item,index)=>(
+                            <Link to='' className="single" key={index}>
+                                <img src={item.image} alt="non-stick-aluminium" />
+                                <h4>{item.category}</h4>
+                                <span className='avail'>{item.numberOfProducts} Items</span>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </div>
