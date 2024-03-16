@@ -5,6 +5,7 @@ import ProductCard from '../../components/slideProduct/ProductCard'
 import PaymentFoot from '../../components/paymentfoot/PaymentFoot'
 import Slider from '../../components/slider/Slider'
 import Sidecart from '../../components/sidecart/Sidecart'
+import Category from '../category/Category'
 
 const Home = () => {
   return (

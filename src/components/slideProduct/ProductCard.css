@@ -32,10 +32,13 @@
     position: absolute;
     top: 5%;
     right: 5%;
-    background: #ff905a;
+    /* background: #ff905a; */
     color: white;
     border-radius: 5px;
     padding: 2px 5px;
+}
+.main-product .product .img .property.bestseller{
+    background: #ff905a;
 }
 .main-product .product .img .property.hotProduct{
     background: rgb(31, 207, 31);

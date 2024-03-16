@@ -43,7 +43,7 @@ const SearchByName = () => {
 
                                   <img loading="lazy" decoding="async" src={item.images[0].img} className="front-img" alt="" />
                                   <img loading="lazy" decoding="async" src={item.images[1].img} className="back-img" alt="" />
-                                  <span className="property bestseller">{item.property}</span>
+                                  <span className={`property ${item.property === "Top Selling" ? 'topSelling' : ''} ${item.property === "bestseller" ? 'bestseller' : ''} ${item.property === "Hot Product" ? 'hotProduct' : ''} ${item.property === "" ? 'p-0' : ''}`}>{item.property}</span>
                               </div>
                               <div className="product-name">{item.productName}</div>
                               <div className="sizes" key={index}>

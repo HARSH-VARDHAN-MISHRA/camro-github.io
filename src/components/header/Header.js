@@ -36,124 +36,124 @@ const Header = () => {
     setCartOpen(false)
   }
   const navigation = {
-    categories: [
-      {
-        id: 'Cookware',
-        name: 'Cookware',
-        featured: [
-          {
-            name: 'New Arrivals',
-            href: '#',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
-            imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
-          },
-          {
-            name: 'Basic Tees',
-            href: '#',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
-            imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
-          },
-        ],
-        sections: [
-          {
-            id: 'PRESSURE COOKERS',
-            name: 'PRESSURE COOKERS',
-            items: [
-              { name: 'CASSEROLE', href: '#' },
-              { name: '3 IN 1 COOKER', href: '#'},
-              { name: 'CO', href: '#'},
-              { name: 'DEEP PAN PRESSURE COOKER', href: '#'},
-              { name: 'OUTER LID', href: '#'},
-              { name: 'INNER LID', href: '#'},
-              { name: 'SAS MITAL PRESSURE COOKERS', href: '#'},
-              { name: 'COMBO SETS', href: '#'},
-              { name: 'SPARE PARTS', href: '#'},
-            ],
-          },
-          {
-            id: 'accessories',
-            name: 'Accessories',
-            items: [
-              { name: 'Watches', href: '#' },
-              { name: 'Wallets', href: '#' },
-              { name: 'Bags', href: '#' },
-              { name: 'Sunglasses', href: '#' },
-              { name: 'Hats', href: '#' },
-              { name: 'Belts', href: '#' },
-            ],
-          },
-          {
-            id: 'brands',
-            name: 'Brands',
-            items: [
-              { name: 'Full Nelson', href: '#' },
-              { name: 'My Way', href: '#' },
-              { name: 'Re-Arranged', href: '#' },
-              { name: 'Counterfeit', href: '#' },
-              { name: 'Significant Other', href: '#' },
-            ],
-          },
-        ],
-      },
-      {
-        id: 'men',
-        name: 'Men',
-        featured: [
-          {
-            name: 'New Arrivals',
-            href: '#',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
-            imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
-          },
-          {
-            name: 'Artwork Tees',
-            href: '#',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg',
-            imageAlt:
-              'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
-          },
-        ],
-        sections: [
-          {
-            id: 'clothing',
-            name: 'Clothing',
-            items: [
-              { name: 'Tops', href: '#' },
-              { name: 'Pants', href: '#' },
-              { name: 'Sweaters', href: '#' },
-              { name: 'T-Shirts', href: '#' },
-              { name: 'Jackets', href: '#' },
-              { name: 'Activewear', href: '#' },
-              { name: 'Browse All', href: '#' },
-            ],
-          },
-          {
-            id: 'accessories',
-            name: 'Accessories',
-            items: [
-              { name: 'Watches', href: '#' },
-              { name: 'Wallets', href: '#' },
-              { name: 'Bags', href: '#' },
-              { name: 'Sunglasses', href: '#' },
-              { name: 'Hats', href: '#' },
-              { name: 'Belts', href: '#' },
-            ],
-          },
-          {
-            id: 'brands',
-            name: 'Brands',
-            items: [
-              { name: 'Re-Arranged', href: '#' },
-              { name: 'Counterfeit', href: '#' },
-              { name: 'Full Nelson', href: '#' },
-              { name: 'My Way', href: '#' },
-            ],
-          },
-        ],
-      },
-    ],
+    // categories: [
+    //   {
+    //     id: 'Cookware',
+    //     name: 'Cookware',
+    //     featured: [
+    //       {
+    //         name: 'New Arrivals',
+    //         href: '#',
+    //         imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
+    //         imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+    //       },
+    //       {
+    //         name: 'Basic Tees',
+    //         href: '#',
+    //         imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
+    //         imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+    //       },
+    //     ],
+    //     sections: [
+    //       {
+    //         id: 'PRESSURE COOKERS',
+    //         name: 'PRESSURE COOKERS',
+    //         items: [
+    //           { name: 'CASSEROLE', href: '#' },
+    //           { name: '3 IN 1 COOKER', href: '#'},
+    //           { name: 'CO', href: '#'},
+    //           { name: 'DEEP PAN PRESSURE COOKER', href: '#'},
+    //           { name: 'OUTER LID', href: '#'},
+    //           { name: 'INNER LID', href: '#'},
+    //           { name: 'SAS MITAL PRESSURE COOKERS', href: '#'},
+    //           { name: 'COMBO SETS', href: '#'},
+    //           { name: 'SPARE PARTS', href: '#'},
+    //         ],
+    //       },
+    //       {
+    //         id: 'accessories',
+    //         name: 'Accessories',
+    //         items: [
+    //           { name: 'Watches', href: '#' },
+    //           { name: 'Wallets', href: '#' },
+    //           { name: 'Bags', href: '#' },
+    //           { name: 'Sunglasses', href: '#' },
+    //           { name: 'Hats', href: '#' },
+    //           { name: 'Belts', href: '#' },
+    //         ],
+    //       },
+    //       {
+    //         id: 'brands',
+    //         name: 'Brands',
+    //         items: [
+    //           { name: 'Full Nelson', href: '#' },
+    //           { name: 'My Way', href: '#' },
+    //           { name: 'Re-Arranged', href: '#' },
+    //           { name: 'Counterfeit', href: '#' },
+    //           { name: 'Significant Other', href: '#' },
+    //         ],
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     id: 'men',
+    //     name: 'Men',
+    //     featured: [
+    //       {
+    //         name: 'New Arrivals',
+    //         href: '#',
+    //         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
+    //         imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
+    //       },
+    //       {
+    //         name: 'Artwork Tees',
+    //         href: '#',
+    //         imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg',
+    //         imageAlt:
+    //           'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
+    //       },
+    //     ],
+    //     sections: [
+    //       {
+    //         id: 'clothing',
+    //         name: 'Clothing',
+    //         items: [
+    //           { name: 'Tops', href: '#' },
+    //           { name: 'Pants', href: '#' },
+    //           { name: 'Sweaters', href: '#' },
+    //           { name: 'T-Shirts', href: '#' },
+    //           { name: 'Jackets', href: '#' },
+    //           { name: 'Activewear', href: '#' },
+    //           { name: 'Browse All', href: '#' },
+    //         ],
+    //       },
+    //       {
+    //         id: 'accessories',
+    //         name: 'Accessories',
+    //         items: [
+    //           { name: 'Watches', href: '#' },
+    //           { name: 'Wallets', href: '#' },
+    //           { name: 'Bags', href: '#' },
+    //           { name: 'Sunglasses', href: '#' },
+    //           { name: 'Hats', href: '#' },
+    //           { name: 'Belts', href: '#' },
+    //         ],
+    //       },
+    //       {
+    //         id: 'brands',
+    //         name: 'Brands',
+    //         items: [
+    //           { name: 'Re-Arranged', href: '#' },
+    //           { name: 'Counterfeit', href: '#' },
+    //           { name: 'Full Nelson', href: '#' },
+    //           { name: 'My Way', href: '#' },
+    //         ],
+    //       },
+    //     ],
+    //   },
+    // ],
     pages: [
-      { name: 'Company', href: '#' },
+      { name: 'Home', href: '/' },
       { name: 'Categories', href: '/categories' },
       { name: 'Shop', href: '/shop' }
     ],
@@ -202,7 +202,7 @@ const Header = () => {
                 </div>
 
                 {/* Links */}
-                <Tab.Group as="div" className="mt-2">
+                {/* <Tab.Group as="div" className="mt-2">
                   <div className="border-b border-gray-200">
                     <Tab.List className="-mb-px flex space-x-8 px-4">
                       {navigation.categories.map((category) => (
@@ -262,7 +262,7 @@ const Header = () => {
                       </Tab.Panel>
                     ))}
                   </Tab.Panels>
-                </Tab.Group>
+                </Tab.Group> */}
 
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   {navigation.pages.map((page) => (
@@ -276,13 +276,13 @@ const Header = () => {
 
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
-                    <Link to="#" className="-m-2 block p-2 font-medium text-gray-900">
-                      Sign in
+                    <Link to="/log-in" className="-m-2 block p-2 font-medium text-gray-900">
+                      LOGIN
                     </Link>
                   </div>
                   <div className="flow-root">
-                    <Link to="#" className="-m-2 block p-2 font-medium text-gray-900">
-                      Create account
+                    <Link to="/sign-in" className="-m-2 block p-2 font-medium text-gray-900">
+                      CREATE ACCOUNT
                     </Link>
                   </div>
                 </div>
@@ -295,8 +295,8 @@ const Header = () => {
       </Transition.Root>
 
       <header className="relative z-10 bg-white">
-        <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Get free delivery on orders over ₹5000
+        <p className="flex h-10 items-center justify-center bg-danger px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+          WELCOME TO CAMRO - STAINLESS STEEL WORLD
         </p>
 
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -317,7 +317,7 @@ const Header = () => {
                 <Link to="/">
                   <span className="sr-only">Your Company</span>
                   <img
-                    className="h-8 w-auto"
+                    className="h-[3rem] w-auto"
                     src={logo}
                     alt=""
                   />
@@ -327,7 +327,7 @@ const Header = () => {
               {/* Flyout menus */}
               <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
                 <div className="flex h-full space-x-8">
-                  {navigation.categories.map((category) => (
+                  {/* {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
                       {({ open }) => (
                         <>
@@ -354,7 +354,7 @@ const Header = () => {
                             leaveTo="opacity-0"
                           >
                             <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500">
-                              {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
+                              
                               <div className="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
 
                               <div className="relative bg-white">
@@ -410,7 +410,7 @@ const Header = () => {
                         </>
                       )}
                     </Popover>
-                  ))}
+                  ))} */}
 
                   {navigation.pages.map((page) => (
                     <Link
@@ -427,7 +427,7 @@ const Header = () => {
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <Link to="/log-in" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Sign in
+                    Login
                   </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   <Link to="/sign-in" className="text-sm font-medium text-gray-700 hover:text-gray-800">

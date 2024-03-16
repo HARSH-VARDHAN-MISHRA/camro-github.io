@@ -107,14 +107,13 @@ const ProductCard = () => {
 ]
   return (
     <>
-      <div className='main-product'>
+      {/* <div className='main-product'>
             <div className="product">
               <div className="img">
                 <div>
                   <img loading="lazy" decoding="async" src={pro1} className="front-img" alt="" />
                   <img loading="lazy" decoding="async" src={pro2} className="back-img" alt="" />
                 </div>
-                  {/* <span className="property bestseller">bestSeller</span> */}
               </div>
               <Link to="/product" className="product-name">outer lid cooker</Link>
               <div className="sizes">
@@ -127,10 +126,9 @@ const ProductCard = () => {
               </div>
               <div className="grid-btn">
                   <a href="javascript:void(0)" className="addToCart">Add to Cart <i className="fa-solid fa-cart-shopping"></i></a>
-                  {/* <a href="" className="Wishlist"><i className="fa-regular fa-heart"></i></a> */}
             </div>
         </div>
-      </div>
+      </div> */}
         
     </>
   )

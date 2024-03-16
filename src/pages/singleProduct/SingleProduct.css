@@ -12,6 +12,9 @@
     /* width: 60%; */
     object-fit: contain;
 }
+.imgd:nth-child(2){
+    display: none;
+}
 .slider-nav{
     margin-top: 0.5rem;
 }

@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './SingleProduct.css'
 
-import bn1 from './bn-1.jpg'
-import bn2 from './bn-2.jpg'
-import bn3 from './bn-3.jpg'
-import bn4 from './bn-4.jpg'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
@@ -13,6 +9,7 @@ const SingleProduct = () => {
     const [singleData,setData] = useState([]);
     const [info,setInfo] = useState("");
     const [sizes,setSize] = useState([]);
+    const [images,setImages] = useState()
     const [num,setNum] = useState(1);
 
     const [active,setActive] = useState(null);
@@ -47,7 +44,8 @@ const SingleProduct = () => {
             console.log(response.data.data)
             setInfo(response.data.data.addInfo)
             setSize(response.data.data.sizes)
-            // console.log(info)
+            setImages(response.data.data.images)
+            console.log(images)
             setData(response.data.data)
         } catch (error) {
             console.log(error)
@@ -64,24 +62,39 @@ const SingleProduct = () => {
                 <div className="row">
                     <div className="col-md-4">
                         <div className="row">
-                            <div className="col-md-12">
-                            {singleData && Array.isArray(singleData)  && singleData.map((item,index)=>(
-                                    <div key={index} className="slider slide-show">
-                                        <div><img src={item} alt="" /></div>
-                                        <div><img src={bn2} alt="" /></div>
-                                        <div><img src={bn3} alt="" /></div>
-                                        <div><img src={bn4} alt="" /></div>
-                                    </div>
+                                <div className="col-12">
+                                    {images && images.map((img)=>(
 
-                                ))}
+                                    <img src={img.img} alt="product-image" loading='lazy' className='imgd' decoding='async' />
+                                    ))}
+                                    {/* <img src={setData.images[0].img} alt="product-image" loading='lazy' decoding='async' /> */}
+                                    {/* <div className="row">
+                                        <div className="col-3"><img src={images[0].img} alt="" /></div>
+                                        <div className="col-3"><img src={images[1].img} alt="" /></div>
+                                    </div> */}
+                                </div>
+                            <div className="col-md-12">
+                                {/* <div className="slider slide-show">
+                                    
+                                    {images && images.map((imgs,index)=>(
+                                        <div><img src={imgs.img} alt="" key={index} /></div>
+                                    ))}
+                                </div> */}
+
                             </div>
                             <div className="col-md-12">
-                                <div className="slider slider-nav">
+                                {/* <div className="slider slider-nav">
+                                    {images && images.map((imgs2,ind)=>(
+                                        <div><div className="img"><img src={imgs2.img} alt="" key={ind} /></div></div>
+                                    ))}
+                                </div> */}
+
+                                {/* <div className="slider slider-nav">
                                     <div><div className="img"><img src={bn1} alt="" /></div></div>
                                     <div><div className="img"><img src={bn2} alt="" /></div></div>
                                     <div><div className="img"><img src={bn3} alt="" /></div></div>
                                     <div><div className="img"><img src={bn4} alt="" /></div></div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -89,10 +102,10 @@ const SingleProduct = () => {
                         <div className="details">
                             <h2>{singleData.productName}</h2>
                             <div className="pricing">
-                                <p>MRP </p>
+                                <p>MRP : </p>
                                 <div className="actual-price">₹ {active ? (active.originalPrice):(singleData.originalPrice)  } </div>
                                 <div className="cut-price">₹   {active ? (active.discoPrice):(singleData.discoPrice) }</div>
-                            </div>:
+                            </div>
                             <p className="desc">{singleData.Desc}</p>
 
                             <div className="size-btns">
