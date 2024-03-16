@@ -63,7 +63,7 @@ const SingleProduct = () => {
             <section className="container mt-5 product-page">
                 <div className="row">
                     <div className="col-md-4">
-                        {/* <div className="row">
+                        <div className="row">
                             <div className="col-md-12">
                             {singleData && Array.isArray(singleData)  && singleData.map((item,index)=>(
                                     <div key={index} className="slider slide-show">
@@ -83,7 +83,7 @@ const SingleProduct = () => {
                                     <div><div className="img"><img src={bn4} alt="" /></div></div>
                                 </div>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
                     <div className="col-md-8">
                         <div className="details">

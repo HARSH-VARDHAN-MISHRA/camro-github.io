@@ -5,9 +5,29 @@ import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@her
 import logo from '../../assets/logo.png'
 import Sidecart from '../sidecart/Sidecart'
 import { Link } from 'react-router-dom'
+
+import './Header.css'
+
 const Header = () => {
+  const [searchInput,setSearchInput] = useState()
+
+  const handleSearchtext = () => {
+    window.location.href=`/Search-By/${searchInput}`
+  }
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleSearchtext();
+    }
+  }
+
   const [open, setOpen] = useState(false)
   const [cartOpen, setCartOpen] = useState(false)
+
+  const [searchOpen, setSearch] = useState(false)
+  const handleSearchTooggle = () =>{
+    setSearch(!searchOpen)
+  }
 
   const handleCartOpen = () =>{
     setCartOpen(!cartOpen)
@@ -274,7 +294,7 @@ const Header = () => {
         </Dialog>
       </Transition.Root>
 
-      <header className="relative bg-white">
+      <header className="relative z-10 bg-white">
         <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           Get free delivery on orders over ₹5000
         </p>
@@ -416,11 +436,22 @@ const Header = () => {
                 </div>
 
                 {/* Search */}
-                <div className="flex lg:ml-6">
-                  <Link to="#" className="p-2 text-gray-400 hover:text-gray-500">
+                <div className="flex lg:ml-6 relative">
+                  <Link to="javascript:void(0)" onClick={handleSearchTooggle} className="p-2 text-gray-400 hover:text-gray-500">
                     <span className="sr-only">Search</span>
                     <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
                   </Link>
+
+                  <div className={`input-search absolute ${searchOpen ? '' : 'hidden' }`}>
+      <input 
+        type="text" 
+        name=""
+        value={searchInput}
+        onChange={(e) => setSearchInput(e.target.value)}
+        onKeyDown={handleKeyDown}
+        placeholder='Search Your Utensils'
+      />
+    </div>
                 </div>
 
                 {/* Cart */}

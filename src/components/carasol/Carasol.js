@@ -1,27 +1,30 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import banner1 from './banner/banner-1.jpg'
-import banner2 from './banner/banner-2.jpg'
-
 import './styles.css';
 
 // import required modules
 import { Pagination ,Navigation } from 'swiper/modules';
+import axios from 'axios';
 
 const Carasol = () => {
-    const imgData = [
-        {
-            id: 1,
-            img: banner1
-        },
-        {
-            id:2,
-            img: banner2
+    const [caraImg,setImage]  = useState([])
+
+    const handleCaraImg= async()=>{
+        try {
+            const response = await axios.get("https://cooker.onrender.com/api/v1/All-Active-Banner");
+            console.log(response.data.data)
+            setImage(response.data.data)
+
+        } catch (error) {
+            console.log(error)
         }
-    ]
+    }
+    useEffect(()=>{
+        handleCaraImg()
+    },[])
   return (
     <>
         <Swiper
@@ -36,8 +39,8 @@ const Carasol = () => {
             className="mySwiper"
         >
             {
-                imgData && imgData.map((item,index)=>(
-                    <SwiperSlide key={index}><img src={item.img} alt="" /></SwiperSlide>
+                caraImg && caraImg.map((item,index)=>(
+                    <SwiperSlide key={index}><img src={item.image} alt="carasoul-image" /></SwiperSlide>
 
                 ))
             }

@@ -40,7 +40,7 @@ const Category = () => {
                 <div className="row">
                     <div className="grid-cate">
                         {categ.map((item,index)=>(
-                            <Link to='' className="single" key={index}>
+                            <Link to={`/ProductBy-Category/${item.category}`} className="single" key={index}>
                                 <img src={item.image} alt="non-stick-aluminium" />
                                 <h4>{item.category}</h4>
                                 <span className='avail'>{item.numberOfProducts} Items</span>

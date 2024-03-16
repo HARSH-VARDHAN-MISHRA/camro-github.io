@@ -43,8 +43,15 @@
 .main-product .product .img .property.topSelling{
     background: rgb(239, 84, 84);
 }
+
+.main-product .product .img .front-img{
+    opacity: 0;
+}
 .main-product .product .img:hover .back-img{
     opacity: 0;
+}
+.main-product .product .img:hover .front-img{
+    opacity: 1;
 }
 
 .main-product .product .product-name{

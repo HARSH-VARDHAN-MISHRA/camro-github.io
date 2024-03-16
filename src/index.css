@@ -104,6 +104,8 @@ img{
   color: white;
   font-weight: 500;
   font-size: calc(1.325rem + .9vw);
+  padding-bottom: 0.5rem ;
+  text-transform: capitalize;
 }
 .page-breadcrumb ol li a{
   font-size: 1.1rem;

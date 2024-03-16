@@ -16,6 +16,8 @@ import {Toaster} from 'react-hot-toast'
 import SignIn from './pages/signin/SignIn';
 import UserProfile from './pages/userProfile/UserProfile';
 import OrderConfirm from './pages/orderConfirm/OrderConfirm';
+import CategoryProducts from './pages/categoryProducts/CategoryProducts';
+import SearchByName from './pages/searchByName/SearchByName';
 function App() {
   const [login,setLogin] = useState(true   )
   return (
@@ -33,6 +35,9 @@ function App() {
         <Route path='/log-in' element={<Login />} />
         <Route path='/sign-in' element={<SignIn />} />
         <Route path='/order-confirmed' element={<OrderConfirm />} />
+        <Route path='/ProductBy-Category/:name' element={<CategoryProducts />} />
+        <Route path='/Search-By/:name' element={<SearchByName />} />
+
 
 
         <Route path='/your-profile' element={<UserProfile />} />
